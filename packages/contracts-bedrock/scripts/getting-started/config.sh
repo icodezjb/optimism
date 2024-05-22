@@ -30,8 +30,8 @@ config=$(cat << EOL
   "l1StartingBlockTag": "$blockhash",
 
   "l1ChainID": 11155111,
-  "l2ChainID": 42069,
-  "l2BlockTime": 2,
+  "l2ChainID": 420691,
+  "l2BlockTime": 6,
   "l1BlockTime": 12,
 
   "maxSequencerDrift": 600,
@@ -42,7 +42,7 @@ config=$(cat << EOL
   "batchInboxAddress": "0xff00000000000000000000000000000000042069",
   "batchSenderAddress": "$GS_BATCHER_ADDRESS",
 
-  "l2OutputOracleSubmissionInterval": 120,
+  "l2OutputOracleSubmissionInterval": 300,
   "l2OutputOracleStartingBlockNumber": 0,
   "l2OutputOracleStartingTimestamp": $timestamp,
 
@@ -99,7 +99,10 @@ config=$(cat << EOL
   "faultGameSplitDepth": 14,
 
   "preimageOracleMinProposalSize": 1800000,
-  "preimageOracleChallengePeriod": 86400
+  "preimageOracleChallengePeriod": 3600,
+  "useCustomGasToken": true,
+  "customGasTokenAddress": "0x990e95C5CddAf60785ad92caF86Dea6c83F6f867",
+  "faultGameWithdrawalDelay": 14400
 }
 EOL
 )
